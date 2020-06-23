@@ -4,7 +4,12 @@ import { Request, Response } from 'express';
 import { CuponByRutQuery } from '../../application/port/in/CuponByRutQuery';
 
 import TYPES from './../../config/types';
+import {ApiOperationGet, ApiPath, SwaggerDefinitionConstant} from "swagger-express-ts";
 
+@ApiPath({
+  path: "/api/v1/cupones",
+  name: "Cupon",
+})
 @controller('/api/v1/cupones')
 export default class CuponController extends BaseHttpController {
 
@@ -12,6 +17,13 @@ export default class CuponController extends BaseHttpController {
     super();
   }
 
+  @ApiOperationGet({
+    description: "Get cupones list desc",
+    summary: "Get cupones list summ",
+    responses: {
+      200: { description: "Success", type: SwaggerDefinitionConstant.Response.Type.ARRAY, model: 'Cupon' }
+    }
+  })
   @httpGet('')
   public async listAllCupones (
     @request() request: Request,

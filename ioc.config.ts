@@ -8,6 +8,7 @@ import { CuponRepository } from './src/application/port/out/CuponRepository';
 import { CuponRestAdapter } from './src/adapter/rest/CuponRestAdapter';
 
 import './src/adapter/controller/CuponController';
+import './src/domain/Cupon';
 
 // load everything needed to the Container
 let container = new Container();
