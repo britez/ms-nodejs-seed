@@ -9,7 +9,7 @@ import axios from 'axios';
 export class CuponRestAdapter implements CuponRepository {
   public async findAllByRut():Promise<Cupon[]> {
     try {
-      let {data} = await axios.get('http://httpstat.us/500?sleep=5000');
+      const {data} = await axios.get('http://httpstat.us/500?sleep=5000');
       console.log('Data', data);
       return [{id: 2}];
     } catch (error) {

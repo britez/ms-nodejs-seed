@@ -26,7 +26,7 @@ describe("Integration Tests:", () => {
     container.bind<CuponByRutQuery>(TYPES.CuponByRutQuery)
       .toConstantValue(mockedQuery);
 
-    let server = new InversifyExpressServer(container).build();
+    const server = new InversifyExpressServer(container).build();
 
     supertest(server)
             .get("/api/v1/cupones")

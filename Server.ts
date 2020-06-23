@@ -7,7 +7,7 @@ import * as swagger from "swagger-express-ts";
 import * as bodyParser from "body-parser";
 
 // start the server
-let server = new InversifyExpressServer(container);
+const server = new InversifyExpressServer(container);
 
 server
   .setConfig((app) => {
@@ -31,12 +31,12 @@ server
   })
   .setErrorConfig((app) => {
     app.use((err, req, res, next) => {
-      console.log("Error handling...", err);
+      console.error("Error handling...", err);
       res.status(err.status).json({message: err.message});
     })
   });
 
-let serverInstance = server.build();
+const serverInstance = server.build();
 serverInstance.listen(3000);
 
-console.log('Server started on port 3000 :)');
+console.info('Server started on port 3000 :)');

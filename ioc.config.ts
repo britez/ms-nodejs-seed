@@ -11,7 +11,7 @@ import './src/adapter/controller/CuponController';
 import './src/domain/Cupon';
 
 // load everything needed to the Container
-let container = new Container();
+const container = new Container();
 container.bind<CuponByRutQuery>(TYPES.CuponByRutQuery).to(ListCuponesByRutUseCase);
 container.bind<CuponRepository>(TYPES.CuponRepository).to(CuponRestAdapter);
 

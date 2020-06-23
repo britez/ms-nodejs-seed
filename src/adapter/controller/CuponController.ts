@@ -26,10 +26,10 @@ export default class CuponController extends BaseHttpController {
   })
   @httpGet('')
   public async listAllCupones (
-    @request() request: Request,
-    @response() response: Response) {
-    let result = await this.cuponByRutQuery.listCuponByRut();
-    return response.status(200).json(result.map(it => ({id: it.id})));
+    @request() req: Request,
+    @response() res: Response) {
+    const result = await this.cuponByRutQuery.listCuponByRut();
+    return res.status(200).json(result.map(it => ({id: it.id})));
   }
 
 }

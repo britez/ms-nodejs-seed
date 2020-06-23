@@ -7,7 +7,8 @@
     "test": "jest",
     "build": "tsc",
     "start": "nodemon out/Server.js",
-    "dev": "tsnd --respawn Server.ts"
+    "dev": "tsnd --respawn Server.ts",
+    "linter": "tslint --project ."
   },
   "author": "",
   "license": "ISC",
@@ -33,6 +34,7 @@
     "canvas": "^2.6.1",
     "jest": "^26.0.1",
     "ts-jest": "^26.1.1",
-    "ts-node-dev": "^1.0.0-pre.49"
+    "ts-node-dev": "^1.0.0-pre.49",
+    "tslint": "^6.1.2"
   }
 }
