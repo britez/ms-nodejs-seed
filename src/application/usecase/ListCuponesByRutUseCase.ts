@@ -11,15 +11,9 @@ export class ListCuponesByRutUseCase implements CuponByRutQuery {
   constructor(@inject(TYPES.CuponRepository) private cuponRepository: CuponRepository) { }
 
   async listCuponByRut(): Promise<Cupon[]> {
-    try {
-      const response = await this.cuponRepository.findAllByRut();
-      console.log('Response from use case', response);
-      return response;
-    } catch (err) {
-      console.log('Error', err);
-      throw err;
-    }
-
+    const response = await this.cuponRepository.findAllByRut();
+    console.log('Response from use case', response);
+    return response;
   }
 
 }

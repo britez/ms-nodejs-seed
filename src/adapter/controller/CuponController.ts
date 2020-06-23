@@ -11,14 +11,11 @@ export default class CuponController {
   constructor(@inject(TYPES.CuponByRutQuery) private cuponByRutQuery: CuponByRutQuery) { }
 
   @httpGet('')
-  public async listAllCupones (@request() request: Request, @response() response: Response) {
-    let result;
-    try {
-      result = await this.cuponByRutQuery.listCuponByRut();
-      return response.status(200).json(result.map(it => ({id: it.id})));
-    } catch (err) {
-      response.status(500).json({err: 'error fetching cupones'});
-    }
+  public async listAllCupones (
+    @request() request: Request,
+    @response() response: Response) {
+    let result = await this.cuponByRutQuery.listCuponByRut();
+    return response.status(200).json(result.map(it => ({id: it.id})));
   }
 
 }

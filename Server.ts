@@ -24,7 +24,13 @@ server.setConfig((app) => {
     // extended: true
   // }));
   // app.use(bodyParser.json());
-});
+})
+  .setErrorConfig((app) => {
+    app.use((err, req, res, next) => {
+      console.log("Error handling...", err);
+      res.status(err.status).json({message: err.message});
+    })
+  });
 
 let serverInstance = server.build();
 serverInstance.listen(3000);
