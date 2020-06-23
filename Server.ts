@@ -1,30 +1,13 @@
 import 'reflect-metadata';
 import { InversifyExpressServer } from 'inversify-express-utils';
-import { Container } from 'inversify';
-import TYPES from './src/config/types';
 
-import { CuponByRutQuery } from './src/application/port/in/CuponByRutQuery';
-import { ListCuponesByRutUseCase } from './src/application/usecase/ListCuponesByRutUseCase';
-
-import { CuponRepository } from './src/application/port/out/CuponRepository';
-import { CuponRestAdapter } from './src/adapter/rest/CuponRestAdapter';
-
-import './src/adapter/controller/CuponController';
-
-// load everything needed to the Container
-let container = new Container();
-container.bind<CuponByRutQuery>(TYPES.CuponByRutQuery).to(ListCuponesByRutUseCase);
-container.bind<CuponRepository>(TYPES.CuponRepository).to(CuponRestAdapter);
+import container from './ioc.config';
 
 // start the server
 let server = new InversifyExpressServer(container);
 
-server.setConfig((app) => {
-  // app.use(bodyParser.urlencoded({
-    // extended: true
-  // }));
-  // app.use(bodyParser.json());
-})
+server
+  .setConfig((app) => {})
   .setErrorConfig((app) => {
     app.use((err, req, res, next) => {
       console.log("Error handling...", err);

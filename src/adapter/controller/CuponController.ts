@@ -1,14 +1,16 @@
-import { controller, httpGet, response, request } from 'inversify-express-utils';
+import {controller, httpGet, response, request, BaseHttpController} from 'inversify-express-utils';
 import { inject } from 'inversify';
 import { Request, Response } from 'express';
-import { CuponByRutQuery } from './../../application/port/in/CuponByRutQuery';
+import { CuponByRutQuery } from '../../application/port/in/CuponByRutQuery';
 
 import TYPES from './../../config/types';
 
 @controller('/api/v1/cupones')
-export default class CuponController {
+export default class CuponController extends BaseHttpController {
 
-  constructor(@inject(TYPES.CuponByRutQuery) private cuponByRutQuery: CuponByRutQuery) { }
+  constructor(@inject(TYPES.CuponByRutQuery) private cuponByRutQuery: CuponByRutQuery) {
+    super();
+  }
 
   @httpGet('')
   public async listAllCupones (
