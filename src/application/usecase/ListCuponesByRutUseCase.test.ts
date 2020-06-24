@@ -1,5 +1,5 @@
 import { ListCuponesByRutUseCase } from './ListCuponesByRutUseCase';
-import { CuponRepository } from './../port/out/CuponRepository';
+import { CuponRepository } from '../port/out/CuponRepository';
 import { Cupon } from './../../domain/Cupon';
 
 const mockedData = [{id: 1}];

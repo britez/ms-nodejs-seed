@@ -1,0 +1,1783 @@
+11:31:45 (47558) INFO ConfigReader Using stryker.conf.js
+11:31:45 (47558) DEBUG BroadcastReporter Broadcasting to reporters ["html","clear-text","progress"]
+11:31:45 (47558) DEBUG ConfigReader Loading config /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.conf.js
+11:31:45 (47558) DEBUG ConfigReader Loaded config: {
+  "mutator": "typescript",
+  "packageManager": "npm",
+  "reporters": [
+    "html",
+    "clear-text",
+    "progress"
+  ],
+  "testRunner": "jest",
+  "transpilers": [],
+  "coverageAnalysis": "off",
+  "tsconfigFile": "tsconfig.json",
+  "mutate": [
+    "src/**/*.ts"
+  ],
+  "allowConsoleColors": true,
+  "clearTextReporter": {
+    "allowColor": true,
+    "logTests": true,
+    "maxTestsToLog": 3
+  },
+  "dashboard": {
+    "baseUrl": "https://dashboard.stryker-mutator.io/api/reports",
+    "reportType": "full"
+  },
+  "eventReporter": {
+    "baseDir": "reports/mutation/events"
+  },
+  "fileLogLevel": "trace",
+  "logLevel": "debug",
+  "maxConcurrentTestRunners": 9007199254740991,
+  "plugins": [
+    "@stryker-mutator/*"
+  ],
+  "symlinkNodeModules": true,
+  "tempDirName": ".stryker-tmp",
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": null
+  },
+  "timeoutFactor": 1.5,
+  "timeoutMS": 5000,
+  "warnings": true,
+  "configFile": "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.conf.js"
+}
+11:31:45 (47558) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:31:45 (47558) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:31:45 (47558) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:31:45 (47558) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:31:45 (47558) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:31:45 (47558) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:31:45 (47558) DEBUG buildSchemaWithPluginContributions Contributing 2 schemas from plugins to options validation.
+11:31:45 (47558) INFO TypescriptOptionsEditor Loading tsconfig file /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/tsconfig.json
+11:31:45 (47558) INFO InputFileResolver Found 10 of 22 file(s) to be mutated.
+11:31:45 (47558) DEBUG InputFileResolver All input files: [
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.conf.js",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.log",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.gitignore",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/Server.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/ioc.config.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/jest.config.js",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/jestSetup.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/package-lock.json",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/package.json",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/port/in/CuponByRutQuery.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/exception/InternalErrorException.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/types.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/domain/Cupon.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/swagger/index.html",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/tsconfig.json",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/tslint.json"
+]
+11:31:45 (47558) DEBUG InputFileResolver Files to mutate: [
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/port/in/CuponByRutQuery.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/exception/InternalErrorException.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/types.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/domain/Cupon.ts"
+]
+11:31:45 (47558) DEBUG TemporaryDirectory Using temp directory "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp"
+11:31:45 (47558) DEBUG TestFrameworkOrchestrator The `coverageAnalysis` setting is "off", not hooking into the test framework to achieve performance benefits.
+11:31:45 (47558) INFO InitialTestExecutor Starting initial test run. This may take a while.
+11:31:45 (47558) DEBUG Sandbox Creating a sandbox for files in /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox8762743
+11:31:45 (47558) DEBUG Sandbox Creating test runner 0
+11:31:45 (47558) DEBUG ChildProcessProxy Starting /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/test-runner/ChildProcessTestRunnerWorker.js in child process 47582
+11:31:46 (47558) DEBUG TimeoutDecorator Starting timeout timer (300000 ms) for a test run
+11:31:46 (47582) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox8762743
+11:31:46 (47582) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:31:46 (47582) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:31:46 (47582) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:31:46 (47582) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:31:46 (47582) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:31:46 (47582) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:31:46 (47582) DEBUG CustomJestConfigLoader Read Jest config from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox8762743/jest.config.js
+11:31:46 (47582) TRACE JestTestRunner Merging file-based config {
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "setupFiles": [
+    "./jestSetup.ts"
+  ]
+} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+11:31:46 (47582) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:31:46 (47582) DEBUG JestTestRunner Project root is /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox8762743
+11:31:46 (47582) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox8762743","reporters":[]}
+11:31:50 (47558) DEBUG ChildProcessProxy Disposing of worker process 47582
+11:31:50 (47558) DEBUG ChildProcessProxy Kill 47582
+11:31:50 (47558) ERROR InitialTestExecutor One or more tests resulted in an error:
+	  ● Test suite failed to run
+
+    [96msrc/adapter/rest/CuponRestAdapter.ts[0m:[93m1[0m:[93m33[0m - [91merror[0m[90m TS2307: [0mCannot find module './../../application/port/out/CuponRepository' or its corresponding type declarations.
+
+    [7m1[0m import { CuponRepository } from './../../application/port/out/CuponRepository';
+    [7m [0m [91m                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+	  ● Test suite failed to run
+
+    [96msrc/application/usecase/ListCuponesByRutUseCase.test.ts[0m:[93m2[0m:[93m33[0m - [91merror[0m[90m TS2307: [0mCannot find module './../port/out/CuponRepository' or its corresponding type declarations.
+
+    [7m2[0m import { CuponRepository } from './../port/out/CuponRepository';
+    [7m [0m [91m                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+11:31:50 (47558) ERROR StrykerCli an error occurred Error: Something went wrong in the initial test run
+    at InitialTestExecutor.validateResult (/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/process/InitialTestExecutor.js:86:15)
+    at InitialTestExecutor.run (/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/process/InitialTestExecutor.js:41:14)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+11:46:35 (55218) INFO ConfigReader Using stryker.conf.js
+11:46:35 (55218) DEBUG BroadcastReporter Broadcasting to reporters ["html","clear-text","progress"]
+11:46:35 (55218) DEBUG ConfigReader Loading config /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.conf.js
+11:46:35 (55218) DEBUG ConfigReader Loaded config: {
+  "mutator": "typescript",
+  "packageManager": "npm",
+  "reporters": [
+    "html",
+    "clear-text",
+    "progress"
+  ],
+  "testRunner": "jest",
+  "transpilers": [],
+  "coverageAnalysis": "off",
+  "tsconfigFile": "tsconfig.json",
+  "mutate": [
+    "src/**/*.ts"
+  ],
+  "allowConsoleColors": true,
+  "clearTextReporter": {
+    "allowColor": true,
+    "logTests": true,
+    "maxTestsToLog": 3
+  },
+  "dashboard": {
+    "baseUrl": "https://dashboard.stryker-mutator.io/api/reports",
+    "reportType": "full"
+  },
+  "eventReporter": {
+    "baseDir": "reports/mutation/events"
+  },
+  "fileLogLevel": "trace",
+  "logLevel": "debug",
+  "maxConcurrentTestRunners": 9007199254740991,
+  "plugins": [
+    "@stryker-mutator/*"
+  ],
+  "symlinkNodeModules": true,
+  "tempDirName": ".stryker-tmp",
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": null
+  },
+  "timeoutFactor": 1.5,
+  "timeoutMS": 5000,
+  "warnings": true,
+  "configFile": "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.conf.js"
+}
+11:46:35 (55218) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:46:35 (55218) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:46:35 (55218) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:46:35 (55218) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:46:35 (55218) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:46:35 (55218) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:46:35 (55218) DEBUG buildSchemaWithPluginContributions Contributing 2 schemas from plugins to options validation.
+11:46:35 (55218) INFO TypescriptOptionsEditor Loading tsconfig file /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/tsconfig.json
+11:46:35 (55218) INFO InputFileResolver Found 10 of 22 file(s) to be mutated.
+11:46:35 (55218) DEBUG InputFileResolver All input files: [
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.conf.js",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.log",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.gitignore",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/Server.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/ioc.config.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/jest.config.js",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/jestSetup.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/package-lock.json",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/package.json",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/port/in/CuponByRutQuery.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/exception/InternalErrorException.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/types.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/domain/Cupon.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/swagger/index.html",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/tsconfig.json",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/tslint.json"
+]
+11:46:35 (55218) DEBUG InputFileResolver Files to mutate: [
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/port/in/CuponByRutQuery.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/exception/InternalErrorException.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/types.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/domain/Cupon.ts"
+]
+11:46:35 (55218) DEBUG TemporaryDirectory Using temp directory "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp"
+11:46:35 (55218) DEBUG TestFrameworkOrchestrator The `coverageAnalysis` setting is "off", not hooking into the test framework to achieve performance benefits.
+11:46:35 (55218) INFO InitialTestExecutor Starting initial test run. This may take a while.
+11:46:35 (55218) DEBUG Sandbox Creating a sandbox for files in /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+11:46:35 (55218) DEBUG Sandbox Creating test runner 0
+11:46:35 (55218) DEBUG ChildProcessProxy Starting /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/test-runner/ChildProcessTestRunnerWorker.js in child process 55240
+11:46:36 (55218) DEBUG TimeoutDecorator Starting timeout timer (300000 ms) for a test run
+11:46:36 (55240) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+11:46:36 (55240) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:46:36 (55240) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:46:36 (55240) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:46:36 (55240) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:46:36 (55240) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:46:36 (55240) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:46:36 (55240) DEBUG CustomJestConfigLoader Read Jest config from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094/jest.config.js
+11:46:36 (55240) TRACE JestTestRunner Merging file-based config {
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "setupFiles": [
+    "./jestSetup.ts"
+  ],
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/.stryker-tmp/"
+  ]
+} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+11:46:36 (55240) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:46:36 (55240) DEBUG JestTestRunner Project root is /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+11:46:36 (55240) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"testPathIgnorePatterns":["/node_modules/","/.stryker-tmp/"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094","reporters":[]}
+11:46:37 (55218) TRACE ChildProcessProxy No tests found, exiting with code 1
+Run with `--passWithNoTests` to exit with code 0
+In /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+  19 files checked.
+  testMatch: **/__tests__/**/*.[jt]s?(x), **/?(*.)+(spec|test).[tj]s?(x) - 3 matches
+  testPathIgnorePatterns: /node_modules/, /.stryker-tmp/ - 0 matches
+  testRegex:  - 0 matches
+Pattern:  - 0 matches
+
+11:46:37 (55218) WARN ChildProcessProxy Child process [pid 55240] exited unexpectedly with exit code 1 (without signal). Last part of stdout and stderr was:
+	No tests found, exiting with code 1
+	Run with `--passWithNoTests` to exit with code 0
+	In /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+	  19 files checked.
+	  testMatch: **/__tests__/**/*.[jt]s?(x), **/?(*.)+(spec|test).[tj]s?(x) - 3 matches
+	  testPathIgnorePatterns: /node_modules/, /.stryker-tmp/ - 0 matches
+	  testRegex:  - 0 matches
+	Pattern:  - 0 matches
+	 { Error: Child process [pid 55240] exited unexpectedly with exit code 1 (without signal). Last part of stdout and stderr was:
+	No tests found, exiting with code 1
+	Run with `--passWithNoTests` to exit with code 0
+	In /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+	  19 files checked.
+	  testMatch: **/__tests__/**/*.[jt]s?(x), **/?(*.)+(spec|test).[tj]s?(x) - 3 matches
+	  testPathIgnorePatterns: /node_modules/, /.stryker-tmp/ - 0 matches
+	  testRegex:  - 0 matches
+	Pattern:  - 0 matches
+	
+    at ChildProcessProxy.handleUnexpectedExit (/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/child-proxy/ChildProcessProxy.js:33:37)
+    at ChildProcess.emit (events.js:198:13)
+    at maybeClose (internal/child_process.js:982:16)
+    at Socket.stream.socket.on (internal/child_process.js:389:11)
+    at Socket.emit (events.js:198:13)
+    at Pipe._handle.close (net.js:606:12) innerError: undefined, pid: 55240, exitCode: 1, signal: null }
+11:46:37 (55218) DEBUG ChildProcessProxy Starting /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/test-runner/ChildProcessTestRunnerWorker.js in child process 55264
+11:46:38 (55218) DEBUG TimeoutDecorator Starting timeout timer (300000 ms) for a test run
+11:46:37 (55264) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+11:46:37 (55264) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:46:37 (55264) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:46:37 (55264) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:46:37 (55264) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:46:37 (55264) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:46:38 (55264) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:46:38 (55264) DEBUG CustomJestConfigLoader Read Jest config from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094/jest.config.js
+11:46:38 (55264) TRACE JestTestRunner Merging file-based config {
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "setupFiles": [
+    "./jestSetup.ts"
+  ],
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/.stryker-tmp/"
+  ]
+} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+11:46:38 (55264) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:46:38 (55264) DEBUG JestTestRunner Project root is /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+11:46:38 (55264) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"testPathIgnorePatterns":["/node_modules/","/.stryker-tmp/"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094","reporters":[]}
+11:46:38 (55218) TRACE ChildProcessProxy No tests found, exiting with code 1
+Run with `--passWithNoTests` to exit with code 0
+In /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+  19 files checked.
+  testMatch: **/__tests__/**/*.[jt]s?(x), **/?(*.)+(spec|test).[tj]s?(x) - 3 matches
+  testPathIgnorePatterns: /node_modules/, /.stryker-tmp/ - 0 matches
+  testRegex:  - 0 matches
+Pattern:  - 0 matches
+
+11:46:38 (55218) WARN ChildProcessProxy Child process [pid 55264] exited unexpectedly with exit code 1 (without signal). Last part of stdout and stderr was:
+	No tests found, exiting with code 1
+	Run with `--passWithNoTests` to exit with code 0
+	In /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+	  19 files checked.
+	  testMatch: **/__tests__/**/*.[jt]s?(x), **/?(*.)+(spec|test).[tj]s?(x) - 3 matches
+	  testPathIgnorePatterns: /node_modules/, /.stryker-tmp/ - 0 matches
+	  testRegex:  - 0 matches
+	Pattern:  - 0 matches
+	 { Error: Child process [pid 55264] exited unexpectedly with exit code 1 (without signal). Last part of stdout and stderr was:
+	No tests found, exiting with code 1
+	Run with `--passWithNoTests` to exit with code 0
+	In /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+	  19 files checked.
+	  testMatch: **/__tests__/**/*.[jt]s?(x), **/?(*.)+(spec|test).[tj]s?(x) - 3 matches
+	  testPathIgnorePatterns: /node_modules/, /.stryker-tmp/ - 0 matches
+	  testRegex:  - 0 matches
+	Pattern:  - 0 matches
+	
+    at ChildProcessProxy.handleUnexpectedExit (/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/child-proxy/ChildProcessProxy.js:33:37)
+    at ChildProcess.emit (events.js:198:13)
+    at maybeClose (internal/child_process.js:982:16)
+    at Socket.stream.socket.on (internal/child_process.js:389:11)
+    at Socket.emit (events.js:198:13)
+    at Pipe._handle.close (net.js:606:12) innerError: undefined, pid: 55264, exitCode: 1, signal: null }
+11:46:38 (55218) DEBUG ChildProcessProxy Starting /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/test-runner/ChildProcessTestRunnerWorker.js in child process 55267
+11:46:39 (55218) DEBUG ChildProcessProxy Disposing of worker process 55267
+11:46:38 (55267) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+11:46:38 (55267) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:46:38 (55267) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:46:38 (55267) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:46:38 (55267) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:46:38 (55267) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:46:39 (55267) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:46:39 (55267) DEBUG CustomJestConfigLoader Read Jest config from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094/jest.config.js
+11:46:39 (55267) TRACE JestTestRunner Merging file-based config {
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "setupFiles": [
+    "./jestSetup.ts"
+  ],
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/.stryker-tmp/"
+  ]
+} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+11:46:39 (55267) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:46:39 (55267) DEBUG JestTestRunner Project root is /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+11:46:39 (55218) DEBUG ChildProcessProxy Kill 55267
+11:46:39 (55218) DEBUG ChildProcessProxy Starting /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/test-runner/ChildProcessTestRunnerWorker.js in child process 55289
+11:46:39 (55289) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+11:46:39 (55289) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:46:39 (55289) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:46:39 (55289) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:46:39 (55289) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:46:39 (55289) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:46:40 (55289) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:46:40 (55289) DEBUG CustomJestConfigLoader Read Jest config from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094/jest.config.js
+11:46:40 (55289) TRACE JestTestRunner Merging file-based config {
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "setupFiles": [
+    "./jestSetup.ts"
+  ],
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/.stryker-tmp/"
+  ]
+} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+11:46:40 (55289) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:46:40 (55289) DEBUG JestTestRunner Project root is /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+11:46:40 (55218) DEBUG ChildProcessProxy Disposing of worker process 55289
+11:46:40 (55218) DEBUG ChildProcessProxy Kill 55289
+11:46:40 (55218) ERROR InitialTestExecutor One or more tests resulted in an error:
+	Test runner crashed. Tried twice to restart it without any luck. Last time the error message was: Error: Child process [pid 55264] exited unexpectedly with exit code 1 (without signal). Last part of stdout and stderr was:
+	No tests found, exiting with code 1
+	Run with `--passWithNoTests` to exit with code 0
+	In /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+	  19 files checked.
+	  testMatch: **/__tests__/**/*.[jt]s?(x), **/?(*.)+(spec|test).[tj]s?(x) - 3 matches
+	  testPathIgnorePatterns: /node_modules/, /.stryker-tmp/ - 0 matches
+	  testRegex:  - 0 matches
+	Pattern:  - 0 matches
+	
+Error: Child process [pid 55264] exited unexpectedly with exit code 1 (without signal). Last part of stdout and stderr was:
+	No tests found, exiting with code 1
+	Run with `--passWithNoTests` to exit with code 0
+	In /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5038094
+	  19 files checked.
+	  testMatch: **/__tests__/**/*.[jt]s?(x), **/?(*.)+(spec|test).[tj]s?(x) - 3 matches
+	  testPathIgnorePatterns: /node_modules/, /.stryker-tmp/ - 0 matches
+	  testRegex:  - 0 matches
+	Pattern:  - 0 matches
+	
+    at ChildProcessProxy.handleUnexpectedExit (/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/child-proxy/ChildProcessProxy.js:33:37)
+    at ChildProcess.emit (events.js:198:13)
+    at maybeClose (internal/child_process.js:982:16)
+    at Socket.stream.socket.on (internal/child_process.js:389:11)
+    at Socket.emit (events.js:198:13)
+    at Pipe._handle.close (net.js:606:12)
+11:46:40 (55218) ERROR StrykerCli an error occurred Error: Something went wrong in the initial test run
+    at InitialTestExecutor.validateResult (/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/process/InitialTestExecutor.js:86:15)
+    at InitialTestExecutor.run (/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/process/InitialTestExecutor.js:41:14)
+11:47:03 (55517) INFO ConfigReader Using stryker.conf.js
+11:47:03 (55517) DEBUG BroadcastReporter Broadcasting to reporters ["html","clear-text","progress"]
+11:47:03 (55517) DEBUG ConfigReader Loading config /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.conf.js
+11:47:03 (55517) DEBUG ConfigReader Loaded config: {
+  "mutator": "typescript",
+  "packageManager": "npm",
+  "reporters": [
+    "html",
+    "clear-text",
+    "progress"
+  ],
+  "testRunner": "jest",
+  "transpilers": [],
+  "coverageAnalysis": "off",
+  "tsconfigFile": "tsconfig.json",
+  "mutate": [
+    "src/**/*.ts"
+  ],
+  "allowConsoleColors": true,
+  "clearTextReporter": {
+    "allowColor": true,
+    "logTests": true,
+    "maxTestsToLog": 3
+  },
+  "dashboard": {
+    "baseUrl": "https://dashboard.stryker-mutator.io/api/reports",
+    "reportType": "full"
+  },
+  "eventReporter": {
+    "baseDir": "reports/mutation/events"
+  },
+  "fileLogLevel": "trace",
+  "logLevel": "debug",
+  "maxConcurrentTestRunners": 9007199254740991,
+  "plugins": [
+    "@stryker-mutator/*"
+  ],
+  "symlinkNodeModules": true,
+  "tempDirName": ".stryker-tmp",
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": null
+  },
+  "timeoutFactor": 1.5,
+  "timeoutMS": 5000,
+  "warnings": true,
+  "configFile": "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.conf.js"
+}
+11:47:03 (55517) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:47:03 (55517) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:47:03 (55517) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:47:03 (55517) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:47:03 (55517) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:47:03 (55517) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:47:03 (55517) DEBUG buildSchemaWithPluginContributions Contributing 2 schemas from plugins to options validation.
+11:47:03 (55517) INFO TypescriptOptionsEditor Loading tsconfig file /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/tsconfig.json
+11:47:03 (55517) INFO InputFileResolver Found 10 of 22 file(s) to be mutated.
+11:47:03 (55517) DEBUG InputFileResolver All input files: [
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.conf.js",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.log",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.gitignore",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/Server.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/ioc.config.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/jest.config.js",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/jestSetup.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/package-lock.json",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/package.json",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/port/in/CuponByRutQuery.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/exception/InternalErrorException.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/types.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/domain/Cupon.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/swagger/index.html",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/tsconfig.json",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/tslint.json"
+]
+11:47:03 (55517) DEBUG InputFileResolver Files to mutate: [
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/port/in/CuponByRutQuery.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/exception/InternalErrorException.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/types.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/domain/Cupon.ts"
+]
+11:47:03 (55517) DEBUG TemporaryDirectory Using temp directory "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp"
+11:47:03 (55517) DEBUG TestFrameworkOrchestrator The `coverageAnalysis` setting is "off", not hooking into the test framework to achieve performance benefits.
+11:47:03 (55517) INFO InitialTestExecutor Starting initial test run. This may take a while.
+11:47:03 (55517) DEBUG Sandbox Creating a sandbox for files in /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5350334
+11:47:03 (55517) DEBUG Sandbox Creating test runner 0
+11:47:03 (55517) DEBUG ChildProcessProxy Starting /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/test-runner/ChildProcessTestRunnerWorker.js in child process 55539
+11:47:04 (55517) DEBUG TimeoutDecorator Starting timeout timer (300000 ms) for a test run
+11:47:03 (55539) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5350334
+11:47:03 (55539) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:47:03 (55539) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:47:03 (55539) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:47:03 (55539) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:47:03 (55539) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:47:04 (55539) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:47:04 (55539) DEBUG CustomJestConfigLoader Read Jest config from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5350334/jest.config.js
+11:47:04 (55539) TRACE JestTestRunner Merging file-based config {
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "setupFiles": [
+    "./jestSetup.ts"
+  ]
+} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+11:47:04 (55539) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:47:04 (55539) DEBUG JestTestRunner Project root is /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5350334
+11:47:04 (55539) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox5350334","reporters":[]}
+11:47:09 (55517) DEBUG ChildProcessProxy Disposing of worker process 55539
+11:47:09 (55517) DEBUG ChildProcessProxy Kill 55539
+11:47:09 (55517) ERROR InitialTestExecutor One or more tests resulted in an error:
+	  ● Test suite failed to run
+
+    [96msrc/adapter/rest/CuponRestAdapter.ts[0m:[93m1[0m:[93m33[0m - [91merror[0m[90m TS2307: [0mCannot find module './../../application/port/out/CuponRepository' or its corresponding type declarations.
+
+    [7m1[0m import { CuponRepository } from './../../application/port/out/CuponRepository';
+    [7m [0m [91m                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+	  ● Test suite failed to run
+
+    [96msrc/application/usecase/ListCuponesByRutUseCase.test.ts[0m:[93m2[0m:[93m33[0m - [91merror[0m[90m TS2307: [0mCannot find module '../port/out/CuponRepository' or its corresponding type declarations.
+
+    [7m2[0m import { CuponRepository } from '../port/out/CuponRepository';
+    [7m [0m [91m                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+11:47:09 (55517) ERROR StrykerCli an error occurred Error: Something went wrong in the initial test run
+    at InitialTestExecutor.validateResult (/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/process/InitialTestExecutor.js:86:15)
+    at InitialTestExecutor.run (/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/process/InitialTestExecutor.js:41:14)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
+11:50:01 (57200) INFO ConfigReader Using stryker.conf.js
+11:50:02 (57200) DEBUG BroadcastReporter Broadcasting to reporters ["html","clear-text","progress"]
+11:50:01 (57200) DEBUG ConfigReader Loading config /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.conf.js
+11:50:01 (57200) DEBUG ConfigReader Loaded config: {
+  "mutator": "typescript",
+  "packageManager": "npm",
+  "reporters": [
+    "html",
+    "clear-text",
+    "progress"
+  ],
+  "testRunner": "jest",
+  "transpilers": [],
+  "coverageAnalysis": "off",
+  "tsconfigFile": "tsconfig.json",
+  "mutate": [
+    "src/**/*.ts"
+  ],
+  "allowConsoleColors": true,
+  "clearTextReporter": {
+    "allowColor": true,
+    "logTests": true,
+    "maxTestsToLog": 3
+  },
+  "dashboard": {
+    "baseUrl": "https://dashboard.stryker-mutator.io/api/reports",
+    "reportType": "full"
+  },
+  "eventReporter": {
+    "baseDir": "reports/mutation/events"
+  },
+  "fileLogLevel": "trace",
+  "logLevel": "debug",
+  "maxConcurrentTestRunners": 9007199254740991,
+  "plugins": [
+    "@stryker-mutator/*"
+  ],
+  "symlinkNodeModules": true,
+  "tempDirName": ".stryker-tmp",
+  "thresholds": {
+    "high": 80,
+    "low": 60,
+    "break": null
+  },
+  "timeoutFactor": 1.5,
+  "timeoutMS": 5000,
+  "warnings": true,
+  "configFile": "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.conf.js"
+}
+11:50:01 (57200) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:50:01 (57200) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:50:01 (57200) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:50:01 (57200) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:50:01 (57200) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:50:02 (57200) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:50:02 (57200) DEBUG buildSchemaWithPluginContributions Contributing 2 schemas from plugins to options validation.
+11:50:02 (57200) INFO TypescriptOptionsEditor Loading tsconfig file /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/tsconfig.json
+11:50:02 (57200) INFO InputFileResolver Found 11 of 23 file(s) to be mutated.
+11:50:02 (57200) DEBUG InputFileResolver All input files: [
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/port/out/CuponRepository.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.conf.js",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/stryker.log",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.gitignore",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/Server.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/ioc.config.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/jest.config.js",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/jestSetup.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/package-lock.json",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/package.json",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/port/in/CuponByRutQuery.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/exception/InternalErrorException.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/types.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/domain/Cupon.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/swagger/index.html",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/tsconfig.json",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/tslint.json"
+]
+11:50:02 (57200) DEBUG InputFileResolver Files to mutate: [
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/port/out/CuponRepository.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/port/in/CuponByRutQuery.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/exception/InternalErrorException.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/types.ts",
+  "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/domain/Cupon.ts"
+]
+11:50:02 (57200) DEBUG TemporaryDirectory Using temp directory "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp"
+11:50:02 (57200) DEBUG TestFrameworkOrchestrator The `coverageAnalysis` setting is "off", not hooking into the test framework to achieve performance benefits.
+11:50:02 (57200) INFO InitialTestExecutor Starting initial test run. This may take a while.
+11:50:02 (57200) DEBUG Sandbox Creating a sandbox for files in /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox957257
+11:50:02 (57200) DEBUG Sandbox Creating test runner 0
+11:50:02 (57200) DEBUG ChildProcessProxy Starting /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/test-runner/ChildProcessTestRunnerWorker.js in child process 57242
+11:50:03 (57200) DEBUG TimeoutDecorator Starting timeout timer (300000 ms) for a test run
+11:50:02 (57242) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox957257
+11:50:02 (57242) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:50:02 (57242) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:50:02 (57242) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:50:02 (57242) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:50:02 (57242) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:50:03 (57242) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:50:03 (57242) DEBUG CustomJestConfigLoader Read Jest config from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox957257/jest.config.js
+11:50:03 (57242) TRACE JestTestRunner Merging file-based config {
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "setupFiles": [
+    "./jestSetup.ts"
+  ]
+} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+11:50:03 (57242) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:50:03 (57242) DEBUG JestTestRunner Project root is /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox957257
+11:50:03 (57242) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox957257","reporters":[]}
+11:50:13 (57200) DEBUG ChildProcessProxy Disposing of worker process 57242
+11:50:13 (57200) DEBUG ChildProcessProxy Kill 57242
+11:50:13 (57200) INFO InitialTestExecutor Initial test run succeeded. Ran 4 tests in 11 seconds (net 519 ms, overhead 9376 ms).
+11:50:13 (57200) INFO MutatorFacade 74 Mutant(s) generated
+11:50:13 (57200) INFO SandboxPool Creating 4 test runners (based on CPU count)
+11:50:13 (57200) DEBUG Sandbox Creating a sandbox for files in /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786
+11:50:13 (57200) DEBUG Sandbox Creating a sandbox for files in /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670
+11:50:13 (57200) DEBUG Sandbox Creating test runner 0
+11:50:13 (57200) DEBUG ChildProcessProxy Starting /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/test-runner/ChildProcessTestRunnerWorker.js in child process 57367
+11:50:13 (57200) DEBUG Sandbox Creating test runner 1
+11:50:13 (57200) DEBUG ChildProcessProxy Starting /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/test-runner/ChildProcessTestRunnerWorker.js in child process 57368
+11:50:15 (57200) DEBUG Sandbox Creating a sandbox for files in /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838
+11:50:15 (57200) DEBUG Sandbox Creating a sandbox for files in /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111
+11:50:14 (57367) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786
+11:50:14 (57367) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:50:14 (57367) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:50:14 (57367) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:50:14 (57367) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:50:14 (57367) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:50:15 (57367) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:50:15 (57367) DEBUG CustomJestConfigLoader Read Jest config from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/jest.config.js
+11:50:15 (57367) TRACE JestTestRunner Merging file-based config {
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "setupFiles": [
+    "./jestSetup.ts"
+  ]
+} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+11:50:15 (57367) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:50:15 (57367) DEBUG JestTestRunner Project root is /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786
+11:50:15 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:15 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:14 (57368) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670
+11:50:14 (57368) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:50:14 (57368) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:50:14 (57368) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:50:14 (57368) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:50:14 (57368) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:50:15 (57368) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:50:15 (57368) DEBUG CustomJestConfigLoader Read Jest config from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/jest.config.js
+11:50:15 (57368) TRACE JestTestRunner Merging file-based config {
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "setupFiles": [
+    "./jestSetup.ts"
+  ]
+} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+11:50:15 (57368) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:50:15 (57368) DEBUG JestTestRunner Project root is /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670
+11:50:15 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:50:15 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/controller/CuponController.test.ts
+11:50:15 (57368) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:50:15 (57368) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/adapter/controller/CuponController.test.ts
+11:50:15 (57200) DEBUG Sandbox Creating test runner 3
+11:50:15 (57200) DEBUG ChildProcessProxy Starting /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/test-runner/ChildProcessTestRunnerWorker.js in child process 57391
+11:50:15 (57200) DEBUG Sandbox Creating test runner 2
+11:50:15 (57200) DEBUG ChildProcessProxy Starting /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/test-runner/ChildProcessTestRunnerWorker.js in child process 57392
+11:50:18 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:16 (57391) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111
+11:50:16 (57391) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:50:16 (57391) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:50:16 (57391) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:50:16 (57391) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:50:16 (57391) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:50:18 (57391) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:50:18 (57391) DEBUG CustomJestConfigLoader Read Jest config from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/jest.config.js
+11:50:18 (57391) TRACE JestTestRunner Merging file-based config {
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "setupFiles": [
+    "./jestSetup.ts"
+  ]
+} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+11:50:18 (57391) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:50:18 (57391) DEBUG JestTestRunner Project root is /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111
+11:50:18 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:50:18 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/adapter/controller/CuponController.test.ts
+11:50:18 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:16 (57392) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838
+11:50:16 (57392) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:50:16 (57392) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:50:16 (57392) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:50:16 (57392) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:50:16 (57392) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:50:18 (57392) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:50:18 (57392) DEBUG CustomJestConfigLoader Read Jest config from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/jest.config.js
+11:50:18 (57392) TRACE JestTestRunner Merging file-based config {
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "setupFiles": [
+    "./jestSetup.ts"
+  ]
+} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+11:50:18 (57392) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:50:18 (57392) DEBUG JestTestRunner Project root is /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838
+11:50:18 (57392) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838","reporters":[]}
+11:50:18 (57392) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/src/adapter/controller/CuponController.test.ts
+11:50:28 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/adapter/controller/CuponController.test.ts[0m:[93m1[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'supertest' is declared but its value is never read.
+
+    [7m1[0m import supertest from "supertest";
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/adapter/controller/CuponController.test.ts[0m:[93m3[0m:[93m1[0m - [91merror[0m[90m TS6192: [0mAll imports in import declaration are unused.
+
+    [7m3[0m import {
+    [7m [0m [91m~~~~~~~~[0m
+    [7m4[0m   cleanUpMetadata,
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~[0m
+    [7m5[0m   InversifyExpressServer
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [7m6[0m } from 'inversify-express-utils';
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/adapter/controller/CuponController.test.ts[0m:[93m7[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'Container' is declared but its value is never read.
+
+    [7m7[0m import { Container } from "inversify";
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/adapter/controller/CuponController.test.ts[0m:[93m8[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'CuponByRutQuery' is declared but its value is never read.
+
+    [7m8[0m import { CuponByRutQuery } from "../../application/port/in/CuponByRutQuery";
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/adapter/controller/CuponController.test.ts[0m:[93m9[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'TYPES' is declared but its value is never read.
+
+    [7m9[0m import TYPES from "../../config/types";
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+ during execution of mutant: BlockStatement: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:11:37
+11:50:28 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:28 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:50:28 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/controller/CuponController.test.ts
+11:50:30 (57200) DEBUG TimeoutDecorator Timeout expired, restarting the process and reporting timeout
+11:50:31 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/adapter/controller/CuponController.test.ts[0m:[93m1[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'supertest' is declared but its value is never read.
+
+    [7m1[0m import supertest from "supertest";
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/adapter/controller/CuponController.test.ts[0m:[93m5[0m:[93m3[0m - [91merror[0m[90m TS6133: [0m'InversifyExpressServer' is declared but its value is never read.
+
+    [7m5[0m   InversifyExpressServer
+    [7m [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/adapter/controller/CuponController.test.ts[0m:[93m7[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'Container' is declared but its value is never read.
+
+    [7m7[0m import { Container } from "inversify";
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/adapter/controller/CuponController.test.ts[0m:[93m8[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'CuponByRutQuery' is declared but its value is never read.
+
+    [7m8[0m import { CuponByRutQuery } from "../../application/port/in/CuponByRutQuery";
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/adapter/controller/CuponController.test.ts[0m:[93m9[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'TYPES' is declared but its value is never read.
+
+    [7m9[0m import TYPES from "../../config/types";
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+ during execution of mutant: BlockStatement: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:18:19
+11:50:31 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:31 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:50:31 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/controller/CuponController.test.ts
+11:50:31 (57200) DEBUG ChildProcessProxy Disposing of worker process 57368
+11:50:31 (57200) DEBUG ChildProcessProxy Kill 57368
+11:50:31 (57200) DEBUG ChildProcessProxy Starting /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/test-runner/ChildProcessTestRunnerWorker.js in child process 57570
+11:50:31 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/adapter/controller/CuponController.test.ts[0m:[93m4[0m:[93m3[0m - [91merror[0m[90m TS6133: [0m'cleanUpMetadata' is declared but its value is never read.
+
+    [7m4[0m   cleanUpMetadata,
+    [7m [0m [91m  ~~~~~~~~~~~~~~~[0m
+ during execution of mutant: BlockStatement: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:13:23
+11:50:31 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:31 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:50:31 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/adapter/controller/CuponController.test.ts
+11:50:33 (57200) DEBUG TimeoutDecorator Timeout expired, restarting the process and reporting timeout
+11:50:33 (57200) DEBUG ChildProcessProxy Disposing of worker process 57392
+11:50:33 (57200) DEBUG ChildProcessProxy Kill 57392
+11:50:33 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:33 (57200) DEBUG ChildProcessProxy Starting /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/test-runner/ChildProcessTestRunnerWorker.js in child process 57594
+11:50:34 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/adapter/controller/CuponController.test.ts[0m:[93m24[0m:[93m11[0m - [91merror[0m[90m TS2741: [0mProperty 'listCuponByRut' is missing in type '{}' but required in type 'CuponByRutQuery'.
+
+    [7m24[0m     const mockedQuery:CuponByRutQuery = {};
+    [7m  [0m [91m          ~~~~~~~~~~~[0m
+
+      [96msrc/application/port/in/CuponByRutQuery.ts[0m:[93m4[0m:[93m3[0m
+        [7m4[0m   listCuponByRut(): Promise<Cupon[]>;
+        [7m [0m [96m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+        'listCuponByRut' is declared here.
+ during execution of mutant: ObjectLiteral: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:24:40
+11:50:34 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:34 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:50:34 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/adapter/controller/CuponController.test.ts
+11:50:34 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:34 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:50:34 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/controller/CuponController.test.ts
+11:50:32 (57570) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670
+11:50:32 (57570) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:50:32 (57570) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:50:32 (57570) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:50:32 (57570) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:50:32 (57570) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:50:33 (57570) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:50:33 (57570) DEBUG CustomJestConfigLoader Read Jest config from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/jest.config.js
+11:50:33 (57570) TRACE JestTestRunner Merging file-based config {
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "setupFiles": [
+    "./jestSetup.ts"
+  ]
+} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+11:50:33 (57570) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:50:33 (57570) DEBUG JestTestRunner Project root is /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670
+11:50:33 (57570) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:50:33 (57570) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/adapter/controller/CuponController.test.ts
+11:50:36 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:36 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/adapter/controller/CuponController.test.ts[0m:[93m24[0m:[93m65[0m - [91merror[0m[90m TS2322: [0mType 'Promise<{}[]>' is not assignable to type 'Promise<Cupon[]>'.
+      Type '{}[]' is not assignable to type 'Cupon[]'.
+        Property 'id' is missing in type '{}' but required in type 'Cupon'.
+
+    [7m24[0m     const mockedQuery:CuponByRutQuery = { listCuponByRut: () => Promise.resolve([{}])};
+    [7m  [0m [91m                                                                ~~~~~~~~~~~~~~~~~~~~~[0m
+
+      [96msrc/domain/Cupon.ts[0m:[93m13[0m:[93m10[0m
+        [7m13[0m   public id: number;
+        [7m  [0m [96m         ~~[0m
+        'id' is declared here.
+      [96msrc/application/port/in/CuponByRutQuery.ts[0m:[93m4[0m:[93m3[0m
+        [7m4[0m   listCuponByRut(): Promise<Cupon[]>;
+        [7m [0m [96m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+        The expected type comes from the return type of this signature.
+ during execution of mutant: ObjectLiteral: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:24:81
+11:50:36 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:36 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:50:36 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/controller/CuponController.test.ts
+11:50:34 (57594) DEBUG ChildProcessProxyWorker Changing current working directory for this process to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838
+11:50:34 (57594) DEBUG PluginLoader Loading @stryker-mutator/* from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator
+11:50:34 (57594) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner" (matched with expression @stryker-mutator/*)
+11:50:34 (57594) DEBUG PluginLoader Loading plugin "/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript" (matched with expression @stryker-mutator/*)
+11:50:34 (57594) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/jest-runner
+11:50:34 (57594) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/typescript
+11:50:35 (57594) DEBUG PluginLoader Loading plugins /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/node_modules/@stryker-mutator/core/src/reporters/index.js
+11:50:36 (57594) DEBUG CustomJestConfigLoader Read Jest config from /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/jest.config.js
+11:50:36 (57594) TRACE JestTestRunner Merging file-based config {
+  "preset": "ts-jest",
+  "testEnvironment": "node",
+  "setupFiles": [
+    "./jestSetup.ts"
+  ]
+} 
+      with custom config {}
+      and default (internal) stryker config [object Object]
+11:50:36 (57594) DEBUG JestTestRunner Running jest with --findRelatedTests flag. Set jest.enableFindRelatedTests to false to run all tests on every mutant.
+11:50:36 (57594) DEBUG JestTestRunner Project root is /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838
+11:50:36 (57594) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838","reporters":[]}
+11:50:36 (57594) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/src/adapter/controller/CuponController.test.ts
+11:50:38 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:38 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:50:38 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/adapter/controller/CuponController.test.ts
+11:50:39 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:39 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:50:39 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/controller/CuponController.ts
+11:50:40 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:40 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:50:40 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/adapter/controller/CuponController.ts
+11:50:42 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:42 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:50:42 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/controller/CuponController.ts
+11:50:44 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:44 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:50:44 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/adapter/controller/CuponController.ts
+11:50:45 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:45 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:50:45 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/controller/CuponController.ts
+11:50:45 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/adapter/controller/CuponController.test.ts[0m:[93m24[0m:[93m65[0m - [91merror[0m[90m TS2322: [0mType 'undefined' is not assignable to type 'Promise<Cupon[]>'.
+
+    [7m24[0m     const mockedQuery:CuponByRutQuery = { listCuponByRut: () => undefined};
+    [7m  [0m [91m                                                                ~~~~~~~~~[0m
+
+      [96msrc/application/port/in/CuponByRutQuery.ts[0m:[93m4[0m:[93m3[0m
+        [7m4[0m   listCuponByRut(): Promise<Cupon[]>;
+        [7m [0m [96m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+        The expected type comes from the return type of this signature.
+ during execution of mutant: ArrowFunction: (() => undefined) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:24:58
+11:50:45 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:45 (57570) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:50:45 (57570) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/adapter/controller/CuponController.ts
+11:50:47 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:47 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:50:47 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/adapter/controller/CuponController.ts
+11:50:47 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:47 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:50:47 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/controller/CuponController.ts
+11:50:49 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:49 (57570) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:50:49 (57570) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/adapter/controller/CuponController.ts
+11:50:49 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:49 (57594) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838","reporters":[]}
+11:50:49 (57594) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/src/adapter/controller/CuponController.ts
+11:50:50 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:50 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:50:50 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/adapter/controller/CuponController.ts
+11:50:50 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:50 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:50:50 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/controller/CuponController.ts
+11:50:51 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:51 (57570) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:50:51 (57570) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/adapter/controller/CuponController.ts
+11:50:52 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:52 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:50:52 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/adapter/controller/CuponController.ts
+11:50:53 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:53 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:50:53 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/controller/CuponController.ts
+11:50:53 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:53 (57594) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838","reporters":[]}
+11:50:53 (57594) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/src/adapter/controller/CuponController.ts
+11:50:54 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:54 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:50:54 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/adapter/rest/CuponRestAdapter.test.ts
+11:50:55 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:55 (57570) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:50:55 (57570) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/adapter/rest/CuponRestAdapter.test.ts
+11:50:55 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:55 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:50:55 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/rest/CuponRestAdapter.test.ts
+11:50:56 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:56 (57594) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838","reporters":[]}
+11:50:56 (57594) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/src/adapter/rest/CuponRestAdapter.test.ts
+11:50:56 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:56 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:50:56 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/adapter/rest/CuponRestAdapter.test.ts
+11:50:57 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/adapter/rest/CuponRestAdapter.test.ts[0m:[93m1[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'CuponRestAdapter' is declared but its value is never read.
+
+    [7m1[0m import { CuponRestAdapter } from './CuponRestAdapter';
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/adapter/rest/CuponRestAdapter.test.ts[0m:[93m6[0m:[93m7[0m - [91merror[0m[90m TS6133: [0m'mockedAxios' is declared but its value is never read.
+
+    [7m6[0m const mockedAxios = axios as jest.Mocked<typeof axios>;
+    [7m [0m [91m      ~~~~~~~~~~~[0m
+ during execution of mutant: BlockStatement: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts:8:41
+11:50:57 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:57 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:50:57 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/rest/CuponRestAdapter.test.ts
+11:50:57 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:57 (57570) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:50:57 (57570) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/adapter/rest/CuponRestAdapter.test.ts
+11:50:58 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:58 (57594) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838","reporters":[]}
+11:50:58 (57594) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/src/adapter/rest/CuponRestAdapter.test.ts
+11:50:58 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:58 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:50:58 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/adapter/rest/CuponRestAdapter.test.ts
+11:50:59 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:59 (57570) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:50:59 (57570) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/adapter/rest/CuponRestAdapter.test.ts
+11:50:59 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:50:59 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:50:59 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/rest/CuponRestAdapter.test.ts
+11:51:00 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/adapter/rest/CuponRestAdapter.test.ts[0m:[93m14[0m:[93m50[0m - [91merror[0m[90m TS2322: [0mType 'undefined' is not assignable to type 'Promise<unknown>'.
+
+    [7m14[0m     mockedAxios.get.mockImplementationOnce(() => undefined);
+    [7m  [0m [91m                                                 ~~~~~~~~~[0m
+
+      [96m../../node_modules/@types/jest/index.d.ts[0m:[93m1180[0m:[93m36[0m
+        [7m1180[0m         mockImplementationOnce(fn: (...args: Y) => T): this;
+        [7m    [0m [96m                                   ~~~~~~~~~~~~~~~~~[0m
+        The expected type comes from the return type of this signature.
+      [96msrc/adapter/rest/CuponRestAdapter.test.ts[0m:[93m14[0m:[93m44[0m
+        [7m14[0m     mockedAxios.get.mockImplementationOnce(() => undefined);
+        [7m  [0m [96m                                           ~~~~~~~~~~~~~~~[0m
+        Did you mean to mark this function as 'async'?
+ during execution of mutant: ArrowFunction: (() => undefined) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts:14:43
+11:51:00 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:00 (57594) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838","reporters":[]}
+11:51:00 (57594) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/src/adapter/rest/CuponRestAdapter.test.ts
+11:51:00 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:00 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:51:00 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/adapter/rest/CuponRestAdapter.test.ts
+11:51:00 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:00 (57570) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:51:00 (57570) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/adapter/rest/CuponRestAdapter.test.ts
+11:51:00 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:00 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:51:00 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/rest/CuponRestAdapter.ts
+11:51:01 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/adapter/rest/CuponRestAdapter.test.ts[0m:[93m20[0m:[93m50[0m - [91merror[0m[90m TS2322: [0mType 'undefined' is not assignable to type 'Promise<unknown>'.
+
+    [7m20[0m     mockedAxios.get.mockImplementationOnce(() => undefined);
+    [7m  [0m [91m                                                 ~~~~~~~~~[0m
+
+      [96m../../node_modules/@types/jest/index.d.ts[0m:[93m1180[0m:[93m36[0m
+        [7m1180[0m         mockImplementationOnce(fn: (...args: Y) => T): this;
+        [7m    [0m [96m                                   ~~~~~~~~~~~~~~~~~[0m
+        The expected type comes from the return type of this signature.
+      [96msrc/adapter/rest/CuponRestAdapter.test.ts[0m:[93m20[0m:[93m44[0m
+        [7m20[0m     mockedAxios.get.mockImplementationOnce(() => undefined);
+        [7m  [0m [96m                                           ~~~~~~~~~~~~~~~[0m
+        Did you mean to mark this function as 'async'?
+ during execution of mutant: ArrowFunction: (() => undefined) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts:20:43
+11:51:01 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:01 (57594) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838","reporters":[]}
+11:51:01 (57594) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/src/adapter/rest/CuponRestAdapter.ts
+11:51:02 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:02 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:51:02 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/adapter/rest/CuponRestAdapter.ts
+11:51:02 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/adapter/rest/CuponRestAdapter.ts[0m:[93m4[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'InternalErrorException' is declared but its value is never read.
+
+    [7m4[0m import { InternalErrorException } from './../../config/exception/InternalErrorException';
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/adapter/rest/CuponRestAdapter.ts[0m:[93m6[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'axios' is declared but its value is never read.
+
+    [7m6[0m import axios from 'axios';
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/adapter/rest/CuponRestAdapter.ts[0m:[93m10[0m:[93m31[0m - [91merror[0m[90m TS2355: [0mA function whose declared type is neither 'void' nor 'any' must return a value.
+
+    [7m10[0m   public async findAllByRut():Promise<Cupon[]> {}
+    [7m  [0m [91m                              ~~~~~~~~~~~~~~~~[0m
+ during execution of mutant: BlockStatement: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts:10:47
+11:51:02 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:02 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:51:02 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/rest/CuponRestAdapter.ts
+11:51:02 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:02 (57570) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:51:02 (57570) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/adapter/rest/CuponRestAdapter.ts
+11:51:03 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/adapter/rest/CuponRestAdapter.ts[0m:[93m6[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'axios' is declared but its value is never read.
+
+    [7m6[0m import axios from 'axios';
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/adapter/rest/CuponRestAdapter.ts[0m:[93m10[0m:[93m31[0m - [91merror[0m[90m TS2355: [0mA function whose declared type is neither 'void' nor 'any' must return a value.
+
+    [7m10[0m   public async findAllByRut():Promise<Cupon[]> {
+    [7m  [0m [91m                              ~~~~~~~~~~~~~~~~[0m
+ during execution of mutant: BlockStatement: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts:11:8
+11:51:03 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:03 (57594) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838","reporters":[]}
+11:51:03 (57594) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/src/adapter/rest/CuponRestAdapter.ts
+11:51:04 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:04 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:51:04 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/adapter/rest/CuponRestAdapter.ts
+11:51:04 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:04 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:51:04 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/adapter/rest/CuponRestAdapter.ts
+11:51:04 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/adapter/rest/CuponRestAdapter.ts[0m:[93m14[0m:[93m15[0m - [91merror[0m[90m TS2741: [0mProperty 'id' is missing in type '{}' but required in type 'Cupon'.
+
+    [7m14[0m       return [{}];
+    [7m  [0m [91m              ~~[0m
+
+      [96msrc/domain/Cupon.ts[0m:[93m13[0m:[93m10[0m
+        [7m13[0m   public id: number;
+        [7m  [0m [96m         ~~[0m
+        'id' is declared here.
+ during execution of mutant: ObjectLiteral: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts:14:14
+11:51:04 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:04 (57594) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838","reporters":[]}
+11:51:04 (57594) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/src/adapter/rest/CuponRestAdapter.ts
+11:51:05 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:05 (57570) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:51:05 (57570) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/application/usecase/ListCuponesByRutUseCase.test.ts
+11:51:06 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/adapter/rest/CuponRestAdapter.ts[0m:[93m4[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'InternalErrorException' is declared but its value is never read.
+
+    [7m4[0m import { InternalErrorException } from './../../config/exception/InternalErrorException';
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/adapter/rest/CuponRestAdapter.ts[0m:[93m10[0m:[93m31[0m - [91merror[0m[90m TS2366: [0mFunction lacks ending return statement and return type does not include 'undefined'.
+
+    [7m10[0m   public async findAllByRut():Promise<Cupon[]> {
+    [7m  [0m [91m                              ~~~~~~~~~~~~~~~~[0m
+ during execution of mutant: BlockStatement: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts:15:20
+11:51:06 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:06 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:51:06 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/application/usecase/ListCuponesByRutUseCase.test.ts
+11:51:06 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:06 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:51:06 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/application/usecase/ListCuponesByRutUseCase.test.ts
+11:51:06 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:06 (57570) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:51:06 (57570) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/application/usecase/ListCuponesByRutUseCase.test.ts
+11:51:07 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:07 (57594) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838","reporters":[]}
+11:51:07 (57594) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/src/application/usecase/ListCuponesByRutUseCase.test.ts
+11:51:07 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/application/usecase/ListCuponesByRutUseCase.test.ts[0m:[93m8[0m:[93m5[0m - [91merror[0m[90m TS2322: [0mType '{}[]' is not assignable to type 'Cupon[]'.
+      Property 'id' is missing in type '{}' but required in type 'Cupon'.
+
+    [7m8[0m     return Promise.resolve(mockedData);
+    [7m [0m [91m    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+      [96msrc/domain/Cupon.ts[0m:[93m13[0m:[93m10[0m
+        [7m13[0m   public id: number;
+        [7m  [0m [96m         ~~[0m
+        'id' is declared here.
+ during execution of mutant: ObjectLiteral: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts:5:20
+11:51:07 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:07 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:51:07 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/application/usecase/ListCuponesByRutUseCase.test.ts
+11:51:08 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/application/usecase/ListCuponesByRutUseCase.test.ts[0m:[93m7[0m:[93m31[0m - [91merror[0m[90m TS2355: [0mA function whose declared type is neither 'void' nor 'any' must return a value.
+
+    [7m7[0m   public async findAllByRut():Promise<Cupon[]> {}
+    [7m [0m [91m                              ~~~~~~~~~~~~~~~~[0m
+ during execution of mutant: BlockStatement: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts:7:47
+11:51:08 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:08 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:51:08 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/application/usecase/ListCuponesByRutUseCase.test.ts
+11:51:08 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:08 (57570) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:51:08 (57570) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/application/usecase/ListCuponesByRutUseCase.ts
+11:51:08 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/application/usecase/ListCuponesByRutUseCase.test.ts[0m:[93m1[0m:[93m1[0m - [91merror[0m[90m TS6133: [0m'ListCuponesByRutUseCase' is declared but its value is never read.
+
+    [7m1[0m import { ListCuponesByRutUseCase } from './ListCuponesByRutUseCase';
+    [7m [0m [91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+    [96msrc/application/usecase/ListCuponesByRutUseCase.test.ts[0m:[93m6[0m:[93m7[0m - [91merror[0m[90m TS6196: [0m'MockedCuponRepository' is declared but never used.
+
+    [7m6[0m class MockedCuponRepository implements CuponRepository {
+    [7m [0m [91m      ~~~~~~~~~~~~~~~~~~~~~[0m
+ during execution of mutant: BlockStatement: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts:12:48
+11:51:08 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:08 (57594) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838","reporters":[]}
+11:51:08 (57594) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/src/application/usecase/ListCuponesByRutUseCase.ts
+11:51:09 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:09 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:51:09 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/config/exception/InternalErrorException.ts
+11:51:09 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/application/usecase/ListCuponesByRutUseCase.test.ts[0m:[93m13[0m:[93m9[0m - [91merror[0m[90m TS6133: [0m'listCuponesByRutUseCase' is declared but its value is never read.
+
+    [7m13[0m   const listCuponesByRutUseCase = new ListCuponesByRutUseCase(new MockedCuponRepository());
+    [7m  [0m [91m        ~~~~~~~~~~~~~~~~~~~~~~~[0m
+ during execution of mutant: BlockStatement: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts:15:56
+11:51:09 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:09 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:51:09 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/config/types.ts
+11:51:10 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/application/usecase/ListCuponesByRutUseCase.ts[0m:[93m11[0m:[93m54[0m - [91merror[0m[90m TS6138: [0mProperty 'cuponRepository' is declared but its value is never read.
+
+    [7m11[0m   constructor(@inject(TYPES.CuponRepository) private cuponRepository: CuponRepository) { }
+    [7m  [0m [91m                                                     ~~~~~~~~~~~~~~~[0m
+    [96msrc/application/usecase/ListCuponesByRutUseCase.ts[0m:[93m13[0m:[93m27[0m - [91merror[0m[90m TS2355: [0mA function whose declared type is neither 'void' nor 'any' must return a value.
+
+    [7m13[0m   async listCuponByRut(): Promise<Cupon[]> {}
+    [7m  [0m [91m                          ~~~~~~~~~~~~~~~~[0m
+ during execution of mutant: BlockStatement: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.ts:13:43
+11:51:10 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:10 (57570) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:51:10 (57570) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/config/types.ts
+11:51:10 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:10 (57594) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838","reporters":[]}
+11:51:10 (57594) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/src/config/types.ts
+11:51:11 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/config/exception/InternalErrorException.ts[0m:[93m2[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'status' has no initializer and is not definitely assigned in the constructor.
+
+    [7m2[0m   status:number;
+    [7m [0m [91m  ~~~~~~[0m
+    [96msrc/config/exception/InternalErrorException.ts[0m:[93m3[0m:[93m3[0m - [91merror[0m[90m TS2564: [0mProperty 'message' has no initializer and is not definitely assigned in the constructor.
+
+    [7m3[0m   message:string;
+    [7m [0m [91m  ~~~~~~~[0m
+    [96msrc/config/exception/InternalErrorException.ts[0m:[93m4[0m:[93m3[0m - [91merror[0m[90m TS2377: [0mConstructors for derived classes must contain a 'super' call.
+
+    [7m4[0m   constructor(status:number, message:string) {}
+    [7m [0m [91m  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+ during execution of mutant: BlockStatement: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/exception/InternalErrorException.ts:4:45
+11:51:11 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:11 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:51:11 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/domain/Cupon.ts
+11:51:12 (57200) DEBUG Sandbox A runtime error occurred:   ● Integration Tests: › 
+
+    @inject called with undefined this could mean that the class CuponController has a circular dependency problem. You can use a LazyServiceIdentifer to  overcome this limitation.
+
+      23 |     responses: {
+      24 |       200: { description: "Success", type: SwaggerDefinitionConstant.Response.Type.ARRAY, model: 'Cupon' }
+    > 25 |     }
+         |      ^
+      26 |   })
+      27 |   @httpGet('')
+      28 |   public async listAllCupones (
+
+      at ../../node_modules/inversify/lib/annotation/inject.js:20:19
+      at src/adapter/controller/CuponController.ts:25:37
+      at DecorateConstructor (../../node_modules/reflect-metadata/Reflect.js:541:33)
+      at Object.decorate (../../node_modules/reflect-metadata/Reflect.js:130:24)
+      at __decorate (src/adapter/controller/CuponController.ts:17:92)
+      at src/adapter/controller/CuponController.ts:14:37
+      at Object.<anonymous> (src/adapter/controller/CuponController.ts:14:1)
+,  ● Test suite failed to run
+
+    [96msrc/application/usecase/ListCuponesByRutUseCase.ts[0m:[93m11[0m:[93m29[0m - [91merror[0m[90m TS2339: [0mProperty 'CuponRepository' does not exist on type '{}'.
+
+    [7m11[0m   constructor(@inject(TYPES.CuponRepository) private cuponRepository: CuponRepository) { }
+    [7m  [0m [91m                            ~~~~~~~~~~~~~~~[0m
+ during execution of mutant: ObjectLiteral: ({}) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/types.ts:1:14
+11:51:12 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:12 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:51:12 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/domain/Cupon.ts
+11:51:13 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:13 (57570) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:51:13 (57570) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/domain/Cupon.ts
+11:51:13 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:13 (57594) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838","reporters":[]}
+11:51:13 (57594) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/src/domain/Cupon.ts
+11:51:14 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:14 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:51:14 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/domain/Cupon.ts
+11:51:16 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/application/usecase/ListCuponesByRutUseCase.ts[0m:[93m11[0m:[93m29[0m - [91merror[0m[90m TS2339: [0mProperty 'CuponRepository' does not exist on type '{}'.
+
+    [7m11[0m   constructor(@inject(TYPES.CuponRepository) private cuponRepository: CuponRepository) { }
+    [7m  [0m [91m                            ~~~~~~~~~~~~~~~[0m
+ during execution of mutant: StringLiteral: ("") file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/domain/Cupon.ts:4:16
+11:51:16 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:16 (57367) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786","reporters":[]}
+11:51:16 (57367) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6463786/src/domain/Cupon.ts
+11:51:17 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:17 (57570) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670","reporters":[]}
+11:51:17 (57570) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6564670/src/domain/Cupon.ts
+11:51:17 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:17 (57594) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838","reporters":[]}
+11:51:17 (57594) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox671838/src/domain/Cupon.ts
+11:51:18 (57200) DEBUG TimeoutDecorator Starting timeout timer (15154.5 ms) for a test run
+11:51:18 (57391) TRACE JestGreaterThan25Adapter Invoking Jest with config {"preset":"ts-jest","testEnvironment":"node","setupFiles":["./jestSetup.ts"],"collectCoverage":false,"verbose":false,"bail":false,"notify":false,"rootDir":"/Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111","reporters":[]}
+11:51:18 (57391) TRACE JestGreaterThan25Adapter Only running tests related to /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp/sandbox6425111/src/domain/Cupon.ts
+11:51:20 (57200) DEBUG Sandbox A runtime error occurred:   ● Test suite failed to run
+
+    [96msrc/application/usecase/ListCuponesByRutUseCase.ts[0m:[93m11[0m:[93m29[0m - [91merror[0m[90m TS2339: [0mProperty 'CuponRepository' does not exist on type '{}'.
+
+    [7m11[0m   constructor(@inject(TYPES.CuponRepository) private cuponRepository: CuponRepository) { }
+    [7m  [0m [91m                            ~~~~~~~~~~~~~~~[0m
+ during execution of mutant: BooleanLiteral: (false) file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/domain/Cupon.ts:10:15
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 0. [RuntimeError] BlockStatement
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:10:37
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   describe("Integration Tests:", () => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     beforeEach((done) => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         cleanUpMetadata();[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         done();[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     });[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     it('', (done) => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       require('./CuponController');[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       const container = new Container();[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       const mockedQuery:CuponByRutQuery = { listCuponByRut: () => Promise.resolve([{id: 1}])};[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       container.bind<CuponByRutQuery>(TYPES.CuponByRutQuery)[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         .toConstantValue(mockedQuery);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       const server = new InversifyExpressServer(container).build();[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       supertest(server)[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-               .get("/api/v1/cupones")[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-               .expect('Content-Type', /json/)[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-               .expect(res => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-                  expect(res.body).toBeInstanceOf(Array);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-                  expect(res.body).toHaveLength(1);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-               })[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-               .expect(200, done);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     });[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   });[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+   describe("Integration Tests:", () => {});[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 1. [RuntimeError] BlockStatement
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:17:19
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     it('', (done) => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       require('./CuponController');[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       const container = new Container();[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       const mockedQuery:CuponByRutQuery = { listCuponByRut: () => Promise.resolve([{id: 1}])};[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       container.bind<CuponByRutQuery>(TYPES.CuponByRutQuery)[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         .toConstantValue(mockedQuery);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       const server = new InversifyExpressServer(container).build();[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       supertest(server)[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-               .get("/api/v1/cupones")[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-               .expect('Content-Type', /json/)[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-               .expect(res => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-                  expect(res.body).toBeInstanceOf(Array);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-                  expect(res.body).toHaveLength(1);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-               })[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-               .expect(200, done);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     });[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+     it('', (done) => {});[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 2. [RuntimeError] BlockStatement
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:12:23
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     beforeEach((done) => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         cleanUpMetadata();[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         done();[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     });[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+     beforeEach((done) => {});[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant timed out![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 3. [TimedOut] StringLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:10:9
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   describe("Integration Tests:", () => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+   describe("", () => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 4. [RuntimeError] ObjectLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:23:40
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       const mockedQuery:CuponByRutQuery = { listCuponByRut: () => Promise.resolve([{id: 1}])};[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+       const mockedQuery:CuponByRutQuery = {};[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 5. [Killed] StringLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:19:12
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       require('./CuponController');[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+       require("");[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant timed out![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 6. [TimedOut] StringLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:17:5
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     it('', (done) => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+     it("Stryker was here!", (done) => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 7. [RuntimeError] ObjectLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:23:81
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       const mockedQuery:CuponByRutQuery = { listCuponByRut: () => Promise.resolve([{id: 1}])};[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+       const mockedQuery:CuponByRutQuery = { listCuponByRut: () => Promise.resolve([{}])};[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 8. [Killed] ArrayDeclaration
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:23:80
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       const mockedQuery:CuponByRutQuery = { listCuponByRut: () => Promise.resolve([{id: 1}])};[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+       const mockedQuery:CuponByRutQuery = { listCuponByRut: () => Promise.resolve([])};[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 9. [Killed] StringLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:32:20
+11:51:22 (57200) DEBUG ClearTextReporter [31m-               .expect('Content-Type', /json/)[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+               .expect("", /json/)[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 11. [Killed] ObjectLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts:8:9
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   @ApiPath({[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     path: "/api/v1/cupones",[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     name: "Cupon",[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   })[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+   @ApiPath({})[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 14. [RuntimeError] ArrowFunction
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:23:58
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       const mockedQuery:CuponByRutQuery = { listCuponByRut: () => Promise.resolve([{id: 1}])};[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+       const mockedQuery:CuponByRutQuery = { listCuponByRut: () => undefined};[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 15. [Killed] StringLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts:12:12
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   @controller('/api/v1/cupones')[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+   @controller("")[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 16. [Killed] BlockStatement
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts:15:87
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     constructor(@inject(TYPES.CuponByRutQuery) private cuponByRutQuery: CuponByRutQuery) {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       super();[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     }[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+     constructor(@inject(TYPES.CuponByRutQuery) private cuponByRutQuery: CuponByRutQuery) {}[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 17. [Killed] ObjectLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts:19:19
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     @ApiOperationGet({[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       description: "Get cupones list desc",[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       summary: "Get cupones list summ",[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       responses: {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         200: { description: "Success", type: SwaggerDefinitionConstant.Response.Type.ARRAY, model: 'Cupon' }[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       }[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     })[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+     @ApiOperationGet({})[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 18. [Killed] StringLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.test.ts:31:17
+11:51:22 (57200) DEBUG ClearTextReporter [31m-               .get("/api/v1/cupones")[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+               .get("")[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 21. [Killed] ObjectLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts:22:15
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       responses: {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         200: { description: "Success", type: SwaggerDefinitionConstant.Response.Type.ARRAY, model: 'Cupon' }[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       }[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+       responses: {}[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 24. [Killed] ObjectLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts:23:11
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         200: { description: "Success", type: SwaggerDefinitionConstant.Response.Type.ARRAY, model: 'Cupon' }[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+         200: {}[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 25. [Killed] BlockStatement
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts:29:31
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       @response() res: Response) {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       const result = await this.cuponByRutQuery.listCuponByRut();[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       return res.status(200).json(result.map(it => ({id: it.id})));[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     }[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+       @response() res: Response) {}[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 26. [Killed] StringLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/controller/CuponController.ts:26:11
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     @httpGet('')[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+     @httpGet("Stryker was here!")[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 29. [Killed] StringLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts:4:10
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   jest.mock('axios');[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+   jest.mock("");[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 30. [RuntimeError] BlockStatement
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts:7:41
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   describe('CuponRestAdapter tests', () => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     const cuponRestAdapter = new CuponRestAdapter();[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     it('Fetch cupones successfully', async () => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       const data = [{id:2}];[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       mockedAxios.get.mockImplementationOnce(() => Promise.resolve(data));[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       await expect(cuponRestAdapter.findAllByRut()).resolves.toEqual(data);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       expect(mockedAxios.get).toHaveBeenCalledWith('http://httpstat.us/500?sleep=5000');[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     })[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     it('Fetch cupones with error', async () => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       mockedAxios.get.mockImplementationOnce(() => Promise.reject(new Error('some error')));[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       await expect(cuponRestAdapter.findAllByRut()).rejects.toThrow('Error fetching url: https://httpstatu.us');[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     })[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   })[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+   describe('CuponRestAdapter tests', () => {})[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 34. [Killed] ObjectLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts:12:18
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       const data = [{id:2}];[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+       const data = [{}];[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 35. [Killed] ArrayDeclaration
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts:12:17
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       const data = [{id:2}];[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+       const data = [];[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 36. [RuntimeError] ArrowFunction
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts:13:43
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       mockedAxios.get.mockImplementationOnce(() => Promise.resolve(data));[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+       mockedAxios.get.mockImplementationOnce(() => undefined);[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 37. [Killed] StringLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts:15:49
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       expect(mockedAxios.get).toHaveBeenCalledWith('http://httpstat.us/500?sleep=5000');[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+       expect(mockedAxios.get).toHaveBeenCalledWith("");[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 40. [RuntimeError] ArrowFunction
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.test.ts:19:43
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       mockedAxios.get.mockImplementationOnce(() => Promise.reject(new Error('some error')));[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+       mockedAxios.get.mockImplementationOnce(() => undefined);[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 42. [RuntimeError] BlockStatement
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts:9:47
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     public async findAllByRut():Promise<Cupon[]> {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       try {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         const {data} = await axios.get('http://httpstat.us/500?sleep=5000');[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         console.log('Data', data);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         return [{id: 2}];[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       } catch (error) {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         console.log('Error fetching!', error);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         throw new InternalErrorException(500, 'Error fetching url: https://httpstatu.us');[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       }[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     }[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+     public async findAllByRut():Promise<Cupon[]> {}[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 44. [RuntimeError] BlockStatement
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts:10:8
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       try {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         const {data} = await axios.get('http://httpstat.us/500?sleep=5000');[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         console.log('Data', data);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         return [{id: 2}];[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       } catch (error) {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+       try {} catch (error) {[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 45. [Killed] StringLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts:11:37
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         const {data} = await axios.get('http://httpstat.us/500?sleep=5000');[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+         const {data} = await axios.get("");[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 47. [RuntimeError] ObjectLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts:13:14
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         return [{id: 2}];[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+         return [{}];[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 48. [Killed] ArrayDeclaration
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts:13:13
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         return [{id: 2}];[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+         return [];[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 49. [RuntimeError] BlockStatement
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts:14:20
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       } catch (error) {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         console.log('Error fetching!', error);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         throw new InternalErrorException(500, 'Error fetching url: https://httpstatu.us');[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       }[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+       } catch (error) {}[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[32mMutant killed![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 52. [Killed] StringLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/adapter/rest/CuponRestAdapter.ts:16:44
+11:51:22 (57200) DEBUG ClearTextReporter [31m-         throw new InternalErrorException(500, 'Error fetching url: https://httpstatu.us');[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+         throw new InternalErrorException(500, "");[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 53. [RuntimeError] ObjectLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts:4:20
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   const mockedData = [{id: 1}];[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+   const mockedData = [{}];[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 54. [RuntimeError] BlockStatement
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts:6:47
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     public async findAllByRut():Promise<Cupon[]> {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       return Promise.resolve(mockedData);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     }[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+     public async findAllByRut():Promise<Cupon[]> {}[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 56. [RuntimeError] BlockStatement
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts:11:48
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   describe('ListCuponesByRutUseCase tests', () => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     const listCuponesByRutUseCase = new ListCuponesByRutUseCase(new MockedCuponRepository());[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     it('when a list of cupones is retrieved', async () => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       await expect(listCuponesByRutUseCase.listCuponByRut()).resolves.toBe(mockedData);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     });[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   [39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   });[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+   describe('ListCuponesByRutUseCase tests', () => {});[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 58. [RuntimeError] BlockStatement
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.test.ts:14:56
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     it('when a list of cupones is retrieved', async () => {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       await expect(listCuponesByRutUseCase.listCuponByRut()).resolves.toBe(mockedData);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     });[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+     it('when a list of cupones is retrieved', async () => {});[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 59. [RuntimeError] BlockStatement
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/application/usecase/ListCuponesByRutUseCase.ts:12:43
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     async listCuponByRut(): Promise<Cupon[]> {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       const response = await this.cuponRepository.findAllByRut();[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       console.log('Response from use case', response);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       return response;[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     }[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+     async listCuponByRut(): Promise<Cupon[]> {}[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 61. [RuntimeError] BlockStatement
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/exception/InternalErrorException.ts:3:45
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     constructor(status:number, message:string) {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       super(message);[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       this.status = status;[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       this.message = message;[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     }[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+     constructor(status:number, message:string) {}[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 62. [RuntimeError] ObjectLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/config/types.ts:0:14
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   const TYPES = {[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       CuponByRutQuery: Symbol.for('CuponByRutQuery'),[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       CuponRepository: Symbol.for('CuponRepository')[39m
+11:51:22 (57200) DEBUG ClearTextReporter [31m-   };[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+   const TYPES = {};[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 66. [RuntimeError] StringLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/domain/Cupon.ts:3:16
+11:51:22 (57200) DEBUG ClearTextReporter [31m-     description : "Cupon description" ,[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+     description : "" ,[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG ClearTextReporter [1m[33mMutant caused a runtime error![39m[22m
+11:51:22 (57200) DEBUG ClearTextReporter 70. [RuntimeError] BooleanLiteral
+11:51:22 (57200) DEBUG ClearTextReporter /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/src/domain/Cupon.ts:9:15
+11:51:22 (57200) DEBUG ClearTextReporter [31m-       required : true,[39m
+11:51:22 (57200) DEBUG ClearTextReporter [32m+       required : false,[39m
+11:51:22 (57200) DEBUG ClearTextReporter 
+11:51:22 (57200) DEBUG ClearTextReporter Ran all tests for this mutant.
+11:51:22 (57200) DEBUG HtmlReporter No base folder configuration found (using configuration: htmlReporter: { baseDir: 'output/folder' }), using default reports/mutation/html
+11:51:22 (57200) DEBUG MutationTestReportCalculator No breaking threshold configured. Won't fail the build no matter how low your mutation score is. Set `thresholds.break` to change this behavior.
+11:51:22 (57200) INFO HtmlReporter Your report can be found at: file:///Users/mapsi/Development/Repositories/fif-payments-bff-cupones/reports/mutation/html/index.html
+11:51:22 (57200) INFO Stryker Done in 1 minute 19 seconds.
+11:51:22 (57200) DEBUG ChildProcessProxy Disposing of worker process 57367
+11:51:22 (57200) DEBUG ChildProcessProxy Disposing of worker process 57570
+11:51:22 (57200) DEBUG ChildProcessProxy Disposing of worker process 57594
+11:51:22 (57200) DEBUG ChildProcessProxy Kill 57367
+11:51:22 (57200) DEBUG ChildProcessProxy Kill 57570
+11:51:22 (57200) DEBUG ChildProcessProxy Kill 57594
+11:51:22 (57200) DEBUG ChildProcessProxy Disposing of worker process 57391
+11:51:22 (57200) DEBUG ChildProcessProxy Kill 57391
+11:51:22 (57200) DEBUG TemporaryDirectory Deleting stryker temp directory /Users/mapsi/Development/Repositories/fif-payments-bff-cupones/.stryker-tmp

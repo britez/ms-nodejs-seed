@@ -1,4 +1,8 @@
 node_modules
-out
+/out
 *.iml
 .idea
+
+# stryker temp files
+.stryker-tmp
+stryker.log

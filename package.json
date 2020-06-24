@@ -9,7 +9,8 @@
     "start": "nodemon out/Server.js",
     "dev": "tsnd --respawn Server.ts",
     "linter": "tslint --project .",
-    "coverage": "typescript-coverage-report -o out/coverage"
+    "coverage": "typescript-coverage-report -o out/coverage",
+    "mutation-test": "stryker run"
   },
   "author": "",
   "license": "ISC",
@@ -31,9 +32,14 @@
     "utf-8-validate": "^5.0.2"
   },
   "devDependencies": {
+    "@stryker-mutator/core": "^3.3.0",
+    "@stryker-mutator/jest-runner": "^3.3.0",
+    "@stryker-mutator/typescript": "^3.3.0",
     "@types/jest": "^26.0.0",
     "canvas": "^2.6.1",
     "jest": "^26.0.1",
+    "stryker": "^0.35.1",
+    "stryker-cli": "^1.0.0",
     "ts-jest": "^26.1.1",
     "ts-node-dev": "^1.0.0-pre.49",
     "tslint": "^6.1.2",
