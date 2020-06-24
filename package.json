@@ -7,7 +7,7 @@
     "test": "jest",
     "build": "tsc",
     "start": "nodemon out/Server.js",
-    "dev": "tsnd --respawn Server.ts",
+    "dev": "export NODE_ENV=local && tsnd --respawn Server.ts",
     "linter": "tslint --project .",
     "coverage": "typescript-coverage-report -o out/coverage",
     "mutation-test": "stryker run"
@@ -16,10 +16,12 @@
   "license": "ISC",
   "dependencies": {
     "@types/compression": "^1.7.0",
+    "@types/dotenv": "^8.2.0",
     "@types/express": "^4.17.6",
     "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "bufferutil": "^4.0.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "inversify": "^5.0.1",
     "inversify-binding-decorators": "^4.0.0",

@@ -1,4 +1,4 @@
-import {controller, httpGet, response, request, BaseHttpController} from 'inversify-express-utils';
+import {controller, httpGet, response, request, BaseHttpController, requestParam} from 'inversify-express-utils';
 import { inject } from 'inversify';
 import { Request, Response } from 'express';
 import { CuponByRutQuery } from '../../application/port/in/CuponByRutQuery';
@@ -24,12 +24,23 @@ export default class CuponController extends BaseHttpController {
       200: { description: "Success", type: SwaggerDefinitionConstant.Response.Type.ARRAY, model: 'Cupon' }
     }
   })
-  @httpGet('')
+  @httpGet('/:rut')
   public async listAllCupones (
+    @requestParam("rut") rut: string,
     @request() req: Request,
     @response() res: Response) {
-    const result = await this.cuponByRutQuery.listCuponByRut();
-    return res.status(200).json(result.map(it => ({id: it.id})));
+    const result = await this.cuponByRutQuery.listCuponByRut(rut);
+    return res
+      .status(200)
+      .json(result
+        .map(it => ({
+          number: it.number,
+          description: it.description,
+          restriction: it.restriction,
+          since: it.since,
+          until: it.until,
+          discount: it.discount
+        })));
   }
 
 }

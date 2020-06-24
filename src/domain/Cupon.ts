@@ -6,16 +6,24 @@ import { ApiModel, ApiModelProperty } from 'swagger-express-ts';
 } )
 export class Cupon {
   @ApiModelProperty( {
-    description : "Id of version" ,
+    description : "Number of discount" ,
     required : true,
     example: ['123456789']
   } )
-  public id: number;
+  public readonly number: string;
+  public readonly discount: string;
+  public readonly description: string;
+  public readonly restriction: string;
+  public readonly since: string;
+  public readonly until: string;
 
-  constructor(id:number) {
-    this.id = id;
+  constructor(number: string, discount: string, description: string, restriction: string, since: string, until: string) {
+    this.number = number;
+    this.discount = discount;
+    this.description = description;
+    this.restriction = restriction;
+    this.since = since;
+    this.until = until;
   }
-
-
 
 }

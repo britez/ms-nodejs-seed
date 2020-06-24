@@ -15,7 +15,7 @@ describe("Integration Tests:", () => {
       done();
   });
 
-  it('', (done) => {
+  it('Controller get', (done) => {
 
     require('./CuponController');
 
@@ -34,6 +34,7 @@ describe("Integration Tests:", () => {
             .expect(res => {
                expect(res.body).toBeInstanceOf(Array);
                expect(res.body).toHaveLength(1);
+               expect(res.body[0].id).toBe(1);
             })
             .expect(200, done);
   });

@@ -1,5 +1,5 @@
 import { Cupon } from '../../../domain/Cupon';
 
 export interface CuponRepository {
-  findAllByRut():Promise<Cupon[]>;
+  findAllByRut(rut: string):Promise<Cupon[]>;
 }
