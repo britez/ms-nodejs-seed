@@ -11,16 +11,15 @@ export class CuponApiCoreProperties {
   public readonly timeout:number;
   public readonly storeNumber:number;
 
-
-  private SUFIX:string = 'cupon.api.core.';
+  private PREFIX:string = 'cupon.api.core.';
 
   constructor(@inject(TYPES.Config) private env:any) {
-    this.baseUrl = this.env[`${this.SUFIX}baseUrl`];
-    this.pathUrl = this.env[`${this.SUFIX}pathUrl`];
-    this.country = this.env[`${this.SUFIX}country`];
-    this.channel = this.env[`${this.SUFIX}channel`];
-    this.storeNumber = this.env[`${this.SUFIX}storeNumber`];
-    this.timeout = +this.env[`${this.SUFIX}timeout`];
+    this.baseUrl = this.env[`${this.PREFIX}baseUrl`];
+    this.pathUrl = this.env[`${this.PREFIX}pathUrl`];
+    this.country = this.env[`${this.PREFIX}country`];
+    this.channel = this.env[`${this.PREFIX}channel`];
+    this.storeNumber = this.env[`${this.PREFIX}storeNumber`];
+    this.timeout = +this.env[`${this.PREFIX}timeout`];
     this.url = `${this.baseUrl}${this.pathUrl}`;
   }
 
